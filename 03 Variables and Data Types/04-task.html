@@ -20,6 +20,12 @@
         let productQuantity2 = 9;  // количество единиц 2го продукта на складе
         let productQuantity3 = 15; // количество единиц 3го продукта на складе
 
+        let averagePrice = (productPrice1 + productPrice2 + productPrice3) / 3;
+        let totalCost = (productPrice1*productQuantity1 + 
+        productPrice2*productQuantity2 +
+        productPrice3*productQuantity3);
+        console.log(averagePrice);
+        console.log(totalCost);
         // Выведите на экран:
         // 1) Среднюю цену на продукт
         // 2) Общую стоимость всех продуктов, которые есть на складе
