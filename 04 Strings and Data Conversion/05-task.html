@@ -23,6 +23,17 @@
         let productQuantity2 = +prompt(`Укажите количество продуктов '${product2}', цена ${productPrice2}`, 0);
         let productQuantity3 = +prompt(`Укажите количество продуктов '${product3}', цена ${productPrice3}`, 0);
 
+        let totalPriceProduct1 = productQuantity1*productPrice1;
+        let totalPriceProduct2 = productQuantity2*productPrice2;
+        let totalPriceProduct3 = productQuantity3*productPrice3;
+
+        let totalPrice = totalPriceProduct1 + totalPriceProduct2 + totalPriceProduct3;
+        alert(`За ${product1} необходимо заплатить ${totalPriceProduct1}`);
+        alert(`За ${product2} необходимо заплатить ${totalPriceProduct2}`);
+        alert(`За ${product3} необходимо заплатить ${totalPriceProduct3}`);
+        alert(`За все продукты необходимо заплатить ${totalPrice}`);
+
+
         // Выведите на экран сколько пользователю нужно заплатить за каждый продукт по отдельности и всего за все продукты
         // используйте форматированный вывод
     </script>
