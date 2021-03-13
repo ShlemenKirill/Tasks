@@ -15,9 +15,16 @@
         3) выведите на экран сколько единиц товара останется на складе после покупки
     </pre>
 
-    <script>
+    <script>     
+                
         let productPrice = 101.5; // цена товара
         let productQuantity = 50;  // количество единиц товара на складе
+        
+        let numberOfProducts = Number(prompt("Введите количество единиц товара",0));
+        let sum = numberOfProducts*productPrice;
+        alert(`Вам необходимо внести ${sum}`);
+        let productsStayed = productQuantity - numberOfProducts;
+        alert(`Осталось ${productsStayed} единиц товара`);
     </script>
 </body>
 
