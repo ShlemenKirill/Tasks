@@ -34,6 +34,11 @@
         console.log(`Общая сумма по продукту '${product1}' составляет ${totalPriceProduct1}`);
         console.log(`Общая сумма по продукту '${product2}' составляет ${totalPriceProduct2}`);
         console.log(`Общая сумма по продукту '${product3}' составляет ${totalPriceProduct3}`);
+        
+        let isNeedDelivery = confirm("Do you need a delivery?")
+        if(isNeedDelivery)
+            total += 40;
+            
         console.log("Всего " + total);
     </script>
 </body>
