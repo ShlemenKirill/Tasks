@@ -26,11 +26,20 @@
         prices[1] = 56;     // Биндеры для бумаги 51 мм
         prices[2] = 12.50;  // Ручка шариковая синяя
 
-        let count = [];
-        count[0] = 2;   // Бумага офисная А4, 80 г/м2, 500 л
-        count[1] = 10;  // Биндеры для бумаги 51 мм
-        count[2] = 10;  // Ручка шариковая синяя
+        let count = [];        
+        count[0] = +prompt("Введите количество бумаги");   // Бумага офисная А4, 80 г/м2, 500 л
+        count[1] = +prompt("Введите количество биндеров");  // Биндеры для бумаги 51 мм
+        count[2] = +prompt("Введите количество ручек шариковых");  // Ручка шариковая синяя
 
+        let sum = 0;
+        
+        for (let index = 0; index < names.length; index++) {
+            let productCost = prices[index] * count[index];
+            sum += productCost;
+            alert(`На ${names[index]} потрачено ${productCost}`);            
+        }
+
+        alert(`Общая сумма равна ${sum}`)
     </script>
 </body>
 
