@@ -37,14 +37,30 @@
         console.log(`Общая сумма по продукту '${product2}' составляет ${totalPriceProduct2}`);
         console.log(`Общая сумма по продукту '${product3}' составляет ${totalPriceProduct3}`);
 
-        let shipping = confirm("Заказываете доставку курьером?");
-        if (shipping)
-        {
-            total += 40;
-            console.log("Доставка 40");
+        let discount = 0;
+        let freeShipping = false;
+        if (total > 500 && total < 1000) {
+            discount = total * 0.05;            
+        }
+        else if (total > 1000 && total < 1500) {
+            discount = total * 0.1;            
+        }
+        else if (total > 1500) {
+            discount = total * 0.15;
+            freeShipping = true;
         }
 
-        console.log("Всего " + total);
+        if (!freeShipping) {
+            let shipping = confirm("Заказываете доставку курьером?");
+            if (shipping)
+            {
+                total += 40;
+                console.log("Доставка 40");
+            }
+        }
+        
+        total-=discount;
+        console.log("Всего " + total + " , скидка " + discount);
     </script>
 </body>
 
