@@ -13,7 +13,17 @@
     </pre>
     <script>
         let values = [10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28 ];
+        let sum = 0;
+        for (const iterator of values) {
+            sum += iterator;
+        }
         
+        let average = sum / values.length;
+        
+
+        for (const iterator of values) {
+            if(iterator > average) alert(iterator);
+        }
     </script>
 </body>
 </html>

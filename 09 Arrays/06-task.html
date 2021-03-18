@@ -12,6 +12,26 @@
     </pre>
     <script>
         let values = [10, 20, 4, 6, 11, 9, 125, 1, 8, 0, 3];
+        let minValue = values[0];
+        let maxValue = values[0];
+
+        for (const iterator of values) {
+            if (iterator > maxValue) {
+                maxValue = iterator;
+            }
+
+            if(iterator < minValue)
+            {
+                minValue = iterator;
+            }
+        }
+
+        let indexOfMaxValue = values.indexOf(maxValue);
+        let indexOfMinValue = values.indexOf(minValue);
+
+        values.splice(indexOfMaxValue, 1, minValue);
+        values.splice(indexOfMinValue, 1, maxValue);
+        console.log(values);
     </script>
 </body>
 </html>

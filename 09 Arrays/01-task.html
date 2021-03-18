@@ -12,6 +12,25 @@
     </pre>
     <script>
         let values = [10, 20, 4, 6, 11, 9, 125, 1, 8, 0, 3];
+        let sum = 0;
+        let maxValue = values[0];
+        let minValue = values[0];
+        for (const iterator of values) {
+            sum += iterator;
+
+            if (iterator > maxValue) {
+                maxValue = iterator;
+            }
+
+            if(iterator < minValue)
+            {
+                minValue = iterator;
+            }
+        }
+        alert("Sum = " + sum);
+        alert("MinValue = " + minValue);
+        alert("MaxValue = " + maxValue);       
+
     </script>
 </body>
 </html>

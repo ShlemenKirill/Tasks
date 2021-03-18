@@ -13,6 +13,20 @@
     </pre>
     <script>
         let values = [10, 20, 5, 7, 11, 8, 125, 4, 8, 3, 23];
+        let evenNumbers = [];
+        let oddNumbers = [];
+        for (const iterator of values) {
+            if(iterator % 2 == 0)
+            {
+                evenNumbers.push(iterator);
+            }
+            else
+            {
+                oddNumbers.push(iterator);
+            }
+        }
+        console.log(evenNumbers);
+        console.log(oddNumbers);
     </script>
 </body>
 </html>
