@@ -13,7 +13,27 @@
         После того, как пользователь ввел значение стоп, посчитайте сумму всех значений, которые находятся в массиве.
     </pre>
     <script>
-        
+        let sumOfNumbers = 0;
+        while(true)
+        {
+            let userInput = prompt("Enter value");
+            if(userInput == "stop") break;
+
+            userInput = Number(userInput);
+
+            if(isNaN(userInput))
+            {
+                alert("You enter wrong value");
+                continue;
+            }
+            else
+            {
+                sumOfNumbers += userInput;
+            }
+        }
+
+        alert(sumOfNumbers);
+
     </script>
 </body>
 </html>

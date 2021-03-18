@@ -14,6 +14,14 @@
     </pre>
     <script>
         let cities = ["London", "Paris", "Berlin", "Rome", "Budapest", "Lisbon", "Madrid", "Amsterdam"];
+        let userInput = prompt("Enter city");
+
+        let indexOfUserInput = cities.indexOf(userInput);
+        if(indexOfUserInput != -1)
+        {
+            cities.splice(indexOfUserInput, 1);
+        }
+         alert(cities);
     </script>
 </body>
 </html>
