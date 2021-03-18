@@ -11,7 +11,13 @@
         Запросите у пользователя число, посчитайте сумму всех числе между 0 и введенным значением и отобразите результат на экран.
     </pre>
     <script>
-        
+        let userValue = +prompt("Enter value");
+        let sum = 0;
+        for (let index = 0; index <= userValue; index++) {
+            sum += index;
+            
+        }
+        alert(sum);
     </script>
 </body>
 </html>
