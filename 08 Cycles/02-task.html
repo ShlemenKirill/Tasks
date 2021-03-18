@@ -13,7 +13,16 @@
         Предусматривать обработку нечисловых значений не обязательно.
     </pre>
     <script>
-        
+        let userValue;
+            while(true)
+            {
+                userValue = +prompt("Enter value grater than 10");
+                if (userValue < 10 || isNaN(userValue)) {
+                    alert("You enter wrong value");
+                }
+                else break;
+            }
+        alert(`Your value was ${userValue}`)    
     </script>
 </body>
 </html>
