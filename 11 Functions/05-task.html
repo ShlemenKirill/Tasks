@@ -11,7 +11,26 @@
         Создайте функцию, которая принимает массив значений и возвращает массив с дублирующимися значениями или null если повторяющихся значений в массиве нет.
     </pre>
     <script>
-        
+        let values = [10, 20, 4, 6, 11, 9, 125, 10, 8, 0, 3, 5, 89, 12, 46, 77, 3];
+                
+        function similarNumbers(array) {
+            let similarValues = [];
+            for (let i = 0; i < array.length - 1; i++) {
+
+                for (let j = i+1; j < array.length; j++) {    
+    
+                    if(array[j] == array[i])
+                    {
+                        similarValues.push(array[j]); 
+                        break;
+                    }                       
+                }            
+            }
+            if(similarValues.length == 0)
+                return null;
+            return similarValues;    
+        }
+        console.log(similarNumbers(values));
     </script>
 </body>
 </html>
