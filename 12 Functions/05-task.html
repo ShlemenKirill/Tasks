@@ -11,6 +11,16 @@
         Запросите у пользователя число. Выведите все числа в обратном порядке от введенного пользователем значения до 1. Используйте для решения рекурсию.
     </pre>
     <script>
+        let userInput = +prompt("Enter value");
+        Recursion(userInput);
+        function Recursion(userInput) {
+            console.log(userInput);
+            if(userInput == 1) return;
+            userInput--;
+
+            Recursion(userInput);        
+            
+        }
         
     </script>
 </body>
