@@ -495,9 +495,28 @@
                 .forEach(user => console.log(user.company));
         }
 
-        function showMostFavoritedFruit()
-        {
-            
+        function showMostFavoritedFruit() {
+            let counters = {};
+
+            users.forEach(user => {
+                if (counters[user.favoriteFruit]) {
+                    counters[user.favoriteFruit]++;
+                }
+                else {
+                    counters[user.favoriteFruit] = 1;
+                }
+            });
+
+            let maxCount = Number.MIN_VALUE;
+            let favoriteFruit = "";
+            for (const key in counters) {
+                if(counters[key] > maxCount) {
+                    maxCount = counters[key];
+                    favoriteFruit = key;
+                }
+            }
+
+            console.log(favoriteFruit + " чаще всего указан как любимый фрукт")
         }
 
         showAllEmails();
